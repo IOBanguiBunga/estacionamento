@@ -1,3 +1,5 @@
+
+
 var EstacionamentoFront = /** @class */ (function () {
     function EstacionamentoFront($, estacionamento) {
         if (estacionamento === void 0) { estacionamento = new Estacionamento(); }
@@ -8,10 +10,9 @@ var EstacionamentoFront = /** @class */ (function () {
         if (salvar === void 0) { salvar = false; }
         this.estacionamento.adicionar(carro);
         var row = document.createElement("tr");
-        row.innerHTML = "\n                <td>" + carro.nome + "</td>\n                <td>" + carro.placa + "</td>\n                <td data-time=\"" + carro.entrada + "\">\n                    " + carro.entrada.toLocaleString("pt-BR", {
-            hour: "numeric",
-            minute: "numeric"
-        }) + "\n                </td>\n                <td>\n                    <button class=\"delete\">x</button>\n                </td>\n            ";
+        row.innerHTML = "\n<td>" + carro.nome + "</td>\n<td>" + carro.placa + "</td>\n <td data-time=\"" + carro.entrada + "\">\n                    " + carro.entrada.toLocaleString("pt-BR", {
+            hour: "numeric", minute: "numeric"
+        }) + "\n </td>\n <td>\n <button class=\"delete\">x</button>\n</td>\n  ";
         if (salvar) {
             this.estacionamento.salvar();
         }
